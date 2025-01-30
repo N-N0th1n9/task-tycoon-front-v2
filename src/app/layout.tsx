@@ -1,3 +1,4 @@
+import { Header } from '@/widgets/header'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
@@ -25,7 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='ru'>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* <Router /> */}
+        <Header />
+        <main className='flex-grow'>{children}</main>
+        {/*Notification*/}
+        {/* <Footer /> */}
+      </body>
     </html>
   )
 }

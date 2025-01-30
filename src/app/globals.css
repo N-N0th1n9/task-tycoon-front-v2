@@ -3,16 +3,31 @@
 @theme {
   --spacing: 2px;
 
-  --color-ttWhite: 'rgb(250, 250, 250)';
+  --color-ttWhite: rgb(250, 250, 250);
 
-  --color-ttBlack: 'rgb(16, 18, 18)';
-  --color-ttLightBlack: 'rgb(51, 51, 51)';
+  --color-ttBlack: rgb(16, 18, 18);
+  --color-ttLightBlack: rgb(51, 51, 51);
 
-  --color-ttRed: 'rgb(255, 0, 0)';
-  --color-ttLightRed: 'rgb(255, 225, 225)';
+  --color-ttRed: rgb(255, 0, 0);
+  --color-ttLightRed: rgb(255, 225, 225);
 
-  --color-ttBlue: 'rgb(163, 255, 100)';
+  --color-ttBlue: rgb(0, 163, 255);
 
-  --color-ttGray: 'rgb(130, 130, 130)';
-  --color-ttLightGray: 'rgb(193, 193, 193)';
+  --color-ttGray: rgb(130, 130, 130);
+  --color-ttLightGray: rgb(193, 193, 193);
+  --color-ttUltraLightGray: rgb(239, 239, 239);
+}
+
+body {
+  @apply bg-ttWhite flex min-h-screen flex-col justify-between text-base font-normal;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 60000s 0s,
+    color 60000s 0s;
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
 }
