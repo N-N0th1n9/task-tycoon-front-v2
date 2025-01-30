@@ -1,0 +1,27 @@
+{
+  "semi": false,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "react-jsx": true,
+  "jsxImportSource": "react",
+  "quoteProps": "consistent",
+  "endOfLine": "lf",
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "singleAttributePerLine": true,
+  "importOrder": ["src/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "tailwindFunctions": ["tv"],
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-organize-attributes",
+    "prettier-plugin-tailwindcss"
+  ],
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
