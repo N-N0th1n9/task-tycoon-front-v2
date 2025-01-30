@@ -5,8 +5,6 @@
   "jsxSingleQuote": true,
   "printWidth": 100,
   "tabWidth": 2,
-  "react-jsx": true,
-  "jsxImportSource": "react",
   "quoteProps": "consistent",
   "endOfLine": "lf",
   "bracketSpacing": true,
@@ -20,8 +18,5 @@
     "@trivago/prettier-plugin-sort-imports",
     "prettier-plugin-organize-attributes",
     "prettier-plugin-tailwindcss"
-  ],
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
-  }
+  ]
 }

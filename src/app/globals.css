@@ -2,4 +2,17 @@
 
 @theme {
   --spacing: 2px;
+
+  --color-ttWhite: 'rgb(250, 250, 250)';
+
+  --color-ttBlack: 'rgb(16, 18, 18)';
+  --color-ttLightBlack: 'rgb(51, 51, 51)';
+
+  --color-ttRed: 'rgb(255, 0, 0)';
+  --color-ttLightRed: 'rgb(255, 225, 225)';
+
+  --color-ttBlue: 'rgb(163, 255, 100)';
+
+  --color-ttGray: 'rgb(130, 130, 130)';
+  --color-ttLightGray: 'rgb(193, 193, 193)';
 }
