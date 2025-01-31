@@ -1,4 +1,4 @@
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className='text-ttWhite w-full bg-[#5E5E5E] text-nowrap'>
       <div className='mx-auto flex h-25 max-w-[1640px] items-center justify-between px-10'>
@@ -11,5 +11,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer

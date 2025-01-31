@@ -1,4 +1,4 @@
-import Footer from '@/widgets/footer/ui'
+import { Footer } from '@/widgets/footer'
 import { Header } from '@/widgets/header'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
