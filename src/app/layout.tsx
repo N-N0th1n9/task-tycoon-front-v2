@@ -1,3 +1,4 @@
+import Footer from '@/widgets/footer/ui'
 import { Header } from '@/widgets/header'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
@@ -31,7 +32,7 @@ export default function RootLayout({
         <Header />
         <main className='flex-grow'>{children}</main>
         {/*Notification*/}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   )
