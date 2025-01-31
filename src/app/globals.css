@@ -12,10 +12,14 @@
   --color-ttLightRed: rgb(255, 225, 225);
 
   --color-ttBlue: rgb(0, 163, 255);
+  --color-ttLightBlue: rgb(234, 248, 255);
 
   --color-ttGray: rgb(130, 130, 130);
+  --color-ttDarkGray: rgb(94, 94, 94);
   --color-ttLightGray: rgb(193, 193, 193);
   --color-ttUltraLightGray: rgb(239, 239, 239);
+
+  --radius-ttBase: 8px;
 }
 
 body {
