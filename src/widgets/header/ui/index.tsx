@@ -8,7 +8,7 @@ import { useState } from 'react'
 import Nav from './nav'
 
 export const Header = () => {
-  // TODO: fix open menu
+  // TODO: fix the open menu (when opening the site on mobile, the menu is open)
   const [isVisible, setIsVisible] = useState(true)
 
   return (
