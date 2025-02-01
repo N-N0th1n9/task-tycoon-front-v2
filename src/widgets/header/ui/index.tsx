@@ -8,7 +8,8 @@ import { useState } from 'react'
 import Nav from './nav'
 
 export const Header = () => {
-  const [isVisible, setIsVisible] = useState(window.innerWidth > 1024)
+  // TODO: fix open menu
+  const [isVisible, setIsVisible] = useState(true)
 
   return (
     <header className='bg-ttUltraLightGray mb-9 h-auto transition'>

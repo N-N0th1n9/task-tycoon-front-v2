@@ -26,6 +26,10 @@ body {
   @apply bg-ttWhite text-ttLightBlack flex min-h-screen flex-col justify-between text-base font-normal;
 }
 
+main {
+  padding: 0 18px;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition:
