@@ -15,12 +15,13 @@ interface IProps<E extends ElementType = ElementType>
 }
 
 const button = tv({
-  base: 'text-ttLightBlack rounded-ttBase disabled:border-ttLightGray disabled:text-ttLightGray flex cursor-pointer items-center justify-center gap-5 border px-7 py-6 leading-12 disabled:pointer-events-none disabled:bg-transparent',
+  base: 'text-ttLightBlack rounded-ttBase disabled:border-ttLightGray disabled:text-ttLightGray flex cursor-pointer items-center justify-center gap-5 border px-7 py-6 leading-12 transition-all active:scale-98 disabled:pointer-events-none disabled:bg-transparent',
   variants: {
     color: {
-      primary: 'border-ttDarkGray',
-      danger: 'border-ttRed text-ttRed bg-ttLightRed',
-      accent: 'border-ttBlue bg-ttLightBlue',
+      primary:
+        'border-ttDarkGray hover:border-ttLightBlack hover:text-ttWhite hover:bg-ttLightBlack',
+      danger: 'border-ttRed text-ttRed bg-ttLightRed hover:bg-ttRed hover:text-ttWhite',
+      accent: 'border-ttBlue bg-ttLightBlue hover:bg-ttBlue hover:text-ttWhite',
     },
     border: {
       outline: '',
@@ -49,6 +50,7 @@ const Button: FC<IProps> = ({
   isChecked,
   href,
   className,
+  type = 'button',
   ...props
 }) => {
   const Element = as || 'button'
@@ -57,6 +59,7 @@ const Button: FC<IProps> = ({
     <Element
       className={cln(button({ color, border }), className)}
       href={href}
+      type={type}
       {...props}
     >
       {/* icon */}
