@@ -6,7 +6,7 @@ import Nav from './nav'
 
 export const Header = () => {
   return (
-    <header className='bg-ttUltraLightGray mb-8'>
+    <header className='bg-ttUltraLightGray mb-9'>
       <div className={'mx-auto flex h-25 max-w-[1620px] items-center justify-between pl-10'}>
         <Link
           href='/'
