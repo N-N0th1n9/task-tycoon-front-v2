@@ -10,7 +10,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 const Input: FC<IProps> = ({ label, error, icon, className, ...props }) => {
   return (
     <div className='relative flex flex-col transition'>
-      {label && <label className='mb-1 text-gray-700'>{label}</label>}
+      {label && <label className='mb-1 text-xs text-gray-700'>{label}</label>}
 
       <div
         className={cln(

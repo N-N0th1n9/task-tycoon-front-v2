@@ -1,15 +1,12 @@
-import Input from '@/shared/components/input'
-import EditIcon from '@/shared/icons/edit'
+import Textarea from '@/shared/components/textarea'
 
 const HomePage = () => {
   return (
     <div className='flex flex-col items-center justify-center gap-20'>
       <h1>Home Page</h1>
-      <Input
-        placeholder='Плейсхолдер'
-        label='Get it'
-        icon={<EditIcon />}
-        error='Обязательно поле'
+      <Textarea
+        label='Textarea'
+        error='Обязательное поле'
       />
     </div>
   )
