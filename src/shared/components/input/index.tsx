@@ -9,12 +9,12 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 const Input: FC<IProps> = ({ label, error, icon, className, ...props }) => {
   return (
-    <div className='relative flex flex-col transition'>
+    <div className={cln('relative flex flex-col transition-all', className)}>
       {label && <label className='mb-1 text-xs text-gray-700'>{label}</label>}
 
       <div
         className={cln(
-          'group rounded-ttBase border-ttLightGray focus-within:border-ttLightBlack hover:border-ttGray flex h-25 gap-5 border px-6 text-base',
+          'group rounded-ttBase [&:not(:focus-within)]:hover:border-ttGray border-ttLightGray focus-within:border-ttLightBlack flex h-25 gap-5 border-[1.5px] px-6 text-base transition-all focus-within:bg-white',
           { 'border-ttRed': error }
         )}
       >

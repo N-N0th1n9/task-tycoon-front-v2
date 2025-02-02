@@ -15,24 +15,23 @@ interface IProps<E extends ElementType = ElementType>
 }
 
 const button = tv({
-  base: 'text-ttLightBlack rounded-ttBase disabled:border-ttLightGray disabled:text-ttLightGray flex cursor-pointer items-center justify-center gap-5 border px-7 py-6 leading-12 transition-all active:scale-98 disabled:pointer-events-none disabled:bg-transparent',
+  base: 'text-ttLightBlack rounded-ttBase disabled:border-ttLightGray disabled:text-ttLightGray flex h-25 cursor-pointer items-center justify-center gap-5 border border-[1.5px] px-7 leading-12 font-medium transition-all active:scale-98 disabled:pointer-events-none disabled:bg-transparent',
   variants: {
     color: {
-      primary:
-        'border-ttDarkGray hover:border-ttLightBlack hover:text-ttWhite hover:bg-ttLightBlack',
+      primary: 'border-ttGray hover:border-ttLightBlack hover:bg-ttUltraLightGray bg-white',
       danger: 'border-ttRed text-ttRed bg-ttLightRed hover:bg-ttRed hover:text-ttWhite',
       accent: 'border-ttBlue bg-ttLightBlue hover:bg-ttBlue hover:text-ttWhite',
     },
     border: {
       outline: '',
-      inline: 'border-transparent',
+      inline: 'border-none bg-transparent',
     },
   },
   compoundVariants: [
     {
       color: 'danger',
       border: 'inline',
-      class: 'bg-transparent',
+      class: 'hover:bg-ttLightRed hover:text-ttRed bg-transparent',
     },
   ],
   defaultVariants: {
