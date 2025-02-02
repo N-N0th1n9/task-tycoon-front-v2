@@ -16,7 +16,7 @@
 
   --color-ttGray: rgb(130, 130, 130);
   --color-ttDarkGray: rgb(94, 94, 94);
-  --color-ttLightGray: rgb(193, 193, 193);
+  --color-ttLightGray: rgb(200, 200, 200);
   --color-ttUltraLightGray: rgb(239, 239, 239);
 
   --radius-ttBase: 8px;
@@ -38,4 +38,9 @@ input:-webkit-autofill:focus {
 }
 input[data-autocompleted] {
   background-color: transparent !important;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
 }
