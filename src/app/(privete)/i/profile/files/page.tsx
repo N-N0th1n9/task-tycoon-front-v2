@@ -1,6 +1,7 @@
 import FileBar from '@/shared/components/filebar'
 
-const ProfileDataPage = () => {
+const ProfileFilesPage = () => {
+  // Позже тоже разбить, когда больше инфы будет
   return (
     <div className='flex w-full flex-col'>
       <FileBar nameTitle='НазваниеФайла.рсшр' />
@@ -10,4 +11,4 @@ const ProfileDataPage = () => {
   )
 }
 
-export default ProfileDataPage
+export default ProfileFilesPage

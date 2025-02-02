@@ -1,7 +1,7 @@
 import { ElementType, FC, ReactNode } from 'react'
 
 interface IProps<E extends ElementType = ElementType> {
-  as: E
+  as?: E
   label: string
   children: ReactNode
 }

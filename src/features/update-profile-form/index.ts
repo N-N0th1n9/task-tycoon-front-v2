@@ -1,0 +1,1 @@
+export { UpdateProfileDataForm } from './ui'

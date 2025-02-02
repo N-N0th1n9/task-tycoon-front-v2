@@ -15,7 +15,7 @@ interface IProps<E extends ElementType = ElementType>
 }
 
 const button = tv({
-  base: 'text-ttLightBlack rounded-ttBase disabled:border-ttLightGray disabled:text-ttLightGray flex h-25 cursor-pointer items-center justify-center gap-5 border border-[1.5px] px-7 leading-12 font-medium transition-all active:scale-98 disabled:pointer-events-none disabled:bg-transparent',
+  base: 'text-ttLightBlack rounded-ttBase disabled:border-ttLightGray disabled:text-ttLightGray flex h-25 cursor-pointer items-center justify-center gap-5 border-[1.5px] px-7 leading-12 font-medium transition-all active:scale-98 disabled:pointer-events-none disabled:bg-transparent',
   variants: {
     color: {
       primary: 'border-ttGray hover:border-ttLightBlack hover:bg-ttUltraLightGray bg-white',

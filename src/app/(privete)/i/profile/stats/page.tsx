@@ -1,6 +1,7 @@
 import ListEntry from '@/shared/components/list-entry'
 
-const ProfileDataPage = () => {
+const ProfileStatsPage = () => {
+  // Позже тоже разбить, когда больше инфы будет
   return (
     <div className='flex w-full flex-col'>
       <ListEntry
@@ -19,4 +20,4 @@ const ProfileDataPage = () => {
   )
 }
 
-export default ProfileDataPage
+export default ProfileStatsPage

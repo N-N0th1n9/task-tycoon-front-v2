@@ -26,4 +26,6 @@ export const ROUTES = {
   USER_ATTEMPTS: ({ task_id, user_id }: { task_id: string; user_id: string }): string =>
     `/i/user-attempts/task_id/${task_id}/user_id/${user_id}`,
   NOT_FOUND: '/404-not-found',
+
+  CHANGE_PASSWORD: '/auth/change-password',
 }
