@@ -1,8 +1,8 @@
-import Button from '@/shared/components/button'
-import Input from '@/shared/components/input'
-import SwitchBar from '@/shared/components/switchbar'
 import CrossIcon from '@/shared/icons/cross'
 import SaveIcon from '@/shared/icons/save'
+import Button from '@/shared/ui/button'
+import Input from '@/shared/ui/input'
+import SwitchBar from '@/shared/ui/switchbar'
 
 const UpdateProfileDataForm = () => {
   // const submitForm = () => {}
@@ -38,8 +38,8 @@ const UpdateProfileDataForm = () => {
             label='Никнейм'
           />
           <div className='flex w-full flex-col'>
-            <SwitchBar nameTitle='Показываться статистику другим людям' />
-            <SwitchBar nameTitle='Показывать данные другим людям' />
+            <SwitchBar label='Показываться статистику другим людям' />
+            <SwitchBar label='Показывать данные другим людям' />
           </div>
           <div className='flex justify-end gap-4'>
             <Button

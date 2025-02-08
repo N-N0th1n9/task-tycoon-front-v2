@@ -1,6 +1,6 @@
-import Button from '@/shared/components/button'
 import SaveIcon from '@/shared/icons/save'
 import { ROUTES } from '@/shared/navigation/routing-paths'
+import Button from '@/shared/ui/button'
 import Link from 'next/link'
 
 const ChangePasswordButton = () => {

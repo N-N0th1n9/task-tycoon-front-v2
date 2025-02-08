@@ -1,7 +1,7 @@
 'use client'
 
-import BurgerMenu from '@/shared/components/burger'
 import cln from '@/shared/helpers/classname'
+import BurgerMenu from '@/shared/ui/burger'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -12,7 +12,7 @@ export const Header = () => {
   const [isVisible, setIsVisible] = useState(true)
 
   return (
-    <header className='bg-ttUltraLightGray mb-9 h-auto transition'>
+    <header className='bg-ttUltraLightGray mb-22 h-auto transition'>
       <div
         className={cln(
           'mx-auto flex max-w-[1620px] items-center justify-between py-4 pl-10 max-lg:flex-col max-lg:gap-4',

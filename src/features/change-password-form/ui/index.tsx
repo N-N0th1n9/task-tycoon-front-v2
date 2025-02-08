@@ -1,6 +1,6 @@
-import BaseAuthFormContainer from '@/shared/components/base-auth-form-container'
-import Input from '@/shared/components/input'
 import KeyIcon from '@/shared/icons/key'
+import BaseAuthFormContainer from '@/shared/ui/base-auth-form-container'
+import Input from '@/shared/ui/input'
 
 const ChangePasswordForm = () => {
   return (

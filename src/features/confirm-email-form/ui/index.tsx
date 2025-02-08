@@ -1,8 +1,8 @@
-import BaseAuthFormContainer from '@/shared/components/base-auth-form-container'
-import Button from '@/shared/components/button'
-import Input from '@/shared/components/input'
 import EmailIcon from '@/shared/icons/email'
 import KeyIcon from '@/shared/icons/key'
+import BaseAuthFormContainer from '@/shared/ui/base-auth-form-container'
+import Button from '@/shared/ui/button'
+import Input from '@/shared/ui/input'
 
 const ConfirmEmailForm = () => {
   return (

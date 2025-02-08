@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         {/* <Router /> */}
         <Header />
-        <main className='bg-ttWhite flex-grow'>{children}</main>
+        <main className='bg-ttWhite mx-auto w-full max-w-[1620px] flex-grow'>{children}</main>
         {/*Notification*/}
         <Footer />
       </body>

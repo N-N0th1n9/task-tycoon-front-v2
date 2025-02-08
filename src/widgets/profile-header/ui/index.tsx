@@ -1,7 +1,7 @@
 import { ChangePasswordButton } from '@/features/change-password-btn'
 import { LogoutButton } from '@/features/logout-btn'
-import Tab from '@/shared/components/tab'
 import Avatar from '@/shared/icons/avatar'
+import Tab from '@/shared/ui/tab'
 
 const ProfileHeader = () => {
   return (

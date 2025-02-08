@@ -1,12 +1,12 @@
-import FileBar from '@/shared/components/filebar'
+import { AttachFile } from '@/features/attach-file'
 
 const ProfileFilesPage = () => {
   // Позже тоже разбить, когда больше инфы будет
   return (
     <div className='flex w-full flex-col'>
-      <FileBar nameTitle='НазваниеФайла.рсшр' />
-      <FileBar nameTitle='НазваниеФайла.рсшр' />
-      <FileBar nameTitle='НазваниеФайла.рсшр' />
+      <AttachFile />
+      <AttachFile />
+      <AttachFile />
     </div>
   )
 }

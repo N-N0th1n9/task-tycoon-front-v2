@@ -1,10 +1,17 @@
-import Button from '@/shared/components/button'
 import Plus from '@/shared/icons/plus'
+import Button from '@/shared/ui/button'
 
 const CreateQuestionButton = () => {
-  const handleClick = () => {}
+  // const handleClick = () => {}
 
-  return <Button icon={<Plus />}>Добавить вопрос</Button>
+  return (
+    <Button
+      icon={<Plus />}
+      className='w-full'
+    >
+      Добавить вопрос
+    </Button>
+  )
 }
 
 export { CreateQuestionButton }
