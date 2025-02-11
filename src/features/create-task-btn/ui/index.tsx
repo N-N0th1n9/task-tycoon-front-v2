@@ -1,5 +1,6 @@
-import SaveIcon from '@/shared/icons/save'
-import Button from '@/shared/ui/button'
+import Button from '@src/shared/ui/button'
+
+import SaveIcon from '../../../../public/assets/icons/save'
 
 const CreateTaskBtn = () => {
   return (

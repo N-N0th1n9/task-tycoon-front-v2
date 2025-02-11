@@ -1,7 +1,8 @@
 'use client'
 
-import DeleteIcon from '@/shared/icons/trash'
-import Button from '@/shared/ui/button'
+import Button from '@src/shared/ui/button'
+
+import DeleteIcon from '../../../../public/assets/icons/trash'
 
 const LogoutButton = () => {
   const handleLogout = () => {

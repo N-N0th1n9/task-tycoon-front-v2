@@ -1,6 +1,7 @@
-import InfoBar, { IProps as IInfoBarProps } from '@/shared/ui/infobar'
-import Switch, { IProps as ISwitchProps } from '@/shared/ui/switch'
 import { FC } from 'react'
+
+import InfoBar, { IProps as IInfoBarProps } from '@src/shared/ui/infobar'
+import Switch, { IProps as ISwitchProps } from '@src/shared/ui/switch'
 
 interface IProps extends ISwitchProps, Pick<IInfoBarProps, 'label'> {}
 

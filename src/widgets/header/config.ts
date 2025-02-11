@@ -1,4 +1,4 @@
-import { ROUTES } from '@/shared/navigation/routing-paths'
+import { ROUTES } from '@src/shared/navigation/routing-paths'
 
 export const PrivateLinks = [
   // { name: 'Банк', href: ROUTES.BANK as string },

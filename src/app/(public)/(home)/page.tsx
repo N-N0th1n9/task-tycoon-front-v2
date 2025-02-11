@@ -1,4 +1,4 @@
-import SelectInput from '@/shared/ui/select-input'
+import SelectInput from '@src/shared/ui/select-input'
 
 const HomePage = () => {
   return (

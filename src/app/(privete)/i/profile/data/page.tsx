@@ -1,4 +1,4 @@
-import { UpdateProfileDataForm } from '@/features/update-profile-form'
+import { UpdateProfileDataForm } from '@src/features/update-profile-form'
 
 const ProfileDataPage = () => {
   return <UpdateProfileDataForm />

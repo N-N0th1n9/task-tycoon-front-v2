@@ -1,8 +1,10 @@
-import DownloadIcon from '@/shared/icons/download'
-import TrashIcon from '@/shared/icons/trash'
-import Button from '@/shared/ui/button'
-import InfoBar, { IProps as IInfoBarProps } from '@/shared/ui/infobar'
 import { ButtonHTMLAttributes, FC } from 'react'
+
+import Button from '@src/shared/ui/button'
+import InfoBar, { IProps as IInfoBarProps } from '@src/shared/ui/infobar'
+
+import DownloadIcon from '../../../../public/assets/icons/download'
+import TrashIcon from '../../../../public/assets/icons/trash'
 
 interface IProps extends Pick<IInfoBarProps, 'label'> {
   downloadBtnProps?: Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'>

@@ -1,7 +1,9 @@
-import { CreateTaskBtn } from '@/features/create-task-btn'
-import DefaultTaskPreview from '@/shared/icons/default-task-preview'
 import Image from 'next/image'
 import { FC } from 'react'
+
+import { CreateTaskBtn } from '@src/features/create-task-btn'
+
+import DefaultTaskPreview from '../../../../../public/assets/icons/default-task-preview'
 
 type IProps = {
   image?: string

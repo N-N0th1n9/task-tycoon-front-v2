@@ -1,7 +1,8 @@
-import LinkIcon from '@/shared/icons/link'
-import Plus from '@/shared/icons/plus'
-import Button from '@/shared/ui/button'
-import Input from '@/shared/ui/input'
+import LinkIcon from '@public/assets/icons/link'
+import Plus from '@public/assets/icons/plus'
+
+import Button from '@src/shared/ui/button'
+import Input from '@src/shared/ui/input'
 
 const AnswerMatching = () => {
   return (

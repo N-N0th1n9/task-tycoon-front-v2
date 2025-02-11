@@ -1,6 +1,6 @@
-import { AttachFile } from '@/features/attach-file'
-import Input from '@/shared/ui/input'
-import Textarea from '@/shared/ui/textarea'
+import { AttachFile } from '@src/features/attach-file'
+import Input from '@src/shared/ui/input'
+import Textarea from '@src/shared/ui/textarea'
 
 const Form = () => {
   return (

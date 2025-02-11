@@ -1,4 +1,4 @@
-import { AttachFile } from '@/features/attach-file'
+import { AttachFile } from '@src/features/attach-file'
 
 const ProfileFilesPage = () => {
   // Позже тоже разбить, когда больше инфы будет

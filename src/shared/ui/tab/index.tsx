@@ -1,9 +1,10 @@
 'use client'
 
-import cln from '@/shared/helpers/classname'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FC } from 'react'
+
+import cln from '@src/shared/helpers/classname'
 
 const isPathEqual = (href: string, pathname: string) => {
   return href.slice(2) === pathname.split('/').pop()

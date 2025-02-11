@@ -1,7 +1,8 @@
-import { ChangePasswordButton } from '@/features/change-password-btn'
-import { LogoutButton } from '@/features/logout-btn'
-import Avatar from '@/shared/icons/avatar'
-import Tab from '@/shared/ui/tab'
+import { ChangePasswordButton } from '@src/features/change-password-btn'
+import { LogoutButton } from '@src/features/logout-btn'
+import Tab from '@src/shared/ui/tab'
+
+import Avatar from '../../../../public/assets/icons/avatar'
 
 const ProfileHeader = () => {
   return (

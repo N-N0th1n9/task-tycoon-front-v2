@@ -1,7 +1,8 @@
-import cln from '@/shared/helpers/classname'
-import React, { FC, ReactNode } from 'react'
+import { FC, InputHTMLAttributes, ReactNode } from 'react'
 
-interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+import cln from '@src/shared/helpers/classname'
+
+interface IProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string
   error?: string
   icon?: ReactNode

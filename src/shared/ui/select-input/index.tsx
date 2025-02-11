@@ -1,8 +1,9 @@
 'use client'
 
-import ArrowSideIcon from '@/shared/icons/arrow-side'
 import clsx from 'clsx'
 import { FC, SelectHTMLAttributes, useState } from 'react'
+
+import ArrowSideIcon from '../../../../public/assets/icons/arrow-side'
 
 interface IProps extends SelectHTMLAttributes<HTMLSelectElement> {
   label?: string

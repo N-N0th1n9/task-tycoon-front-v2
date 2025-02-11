@@ -1,4 +1,4 @@
-import { TaskEditor } from '@/widgets/task-editor'
+import { TaskEditor } from '@src/widgets/task-editor'
 
 const CreateTaskPage = () => {
   return <TaskEditor />

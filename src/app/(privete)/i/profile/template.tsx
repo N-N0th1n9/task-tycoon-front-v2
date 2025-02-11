@@ -1,5 +1,6 @@
-import { ProfileHeader } from '@/widgets/profile-header'
 import { ReactNode } from 'react'
+
+import { ProfileHeader } from '@src/widgets/profile-header'
 
 const ProfileTemplate = ({ children }: { children: ReactNode }) => {
   return (

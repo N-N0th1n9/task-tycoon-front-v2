@@ -1,5 +1,6 @@
-import cln from '@/shared/helpers/classname'
 import { FC, TextareaHTMLAttributes } from 'react'
+
+import cln from '@src/shared/helpers/classname'
 
 interface IProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string

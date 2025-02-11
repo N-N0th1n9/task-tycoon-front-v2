@@ -1,6 +1,7 @@
-import CheckboxArrowIcon from '@/shared/icons/checkbox-arrow'
 import { FC, InputHTMLAttributes } from 'react'
 import { VariantProps, tv } from 'tailwind-variants'
+
+import CheckboxArrowIcon from '../../../../public/assets/icons/checkbox-arrow'
 
 interface IProps extends VariantProps<typeof checkbox>, InputHTMLAttributes<HTMLInputElement> {
   title?: string

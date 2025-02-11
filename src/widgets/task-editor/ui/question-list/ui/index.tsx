@@ -1,14 +1,31 @@
-import { CreateQuestionButton } from '@/features/create-question-btn'
+'use client'
+
+import Plus from '@public/assets/icons/plus'
+
+import Button from '@src/shared/ui/button'
+import { useQuestionsStore } from '@src/widgets/task-editor/model/stores/questions-store'
 
 import QuestionItem from '../../question-item/ui'
 
 const QuestionList = () => {
+  const questions = useQuestionsStore.use.questions()
+  const addNewQuestion = useQuestionsStore.use.addNewQuestion()
+
   return (
     <section>
-      <QuestionItem number={1} />
-      <QuestionItem number={2} />
-      <QuestionItem number={3} />
-      <CreateQuestionButton />
+      {questions.map(question => (
+        <QuestionItem
+          key={question.id}
+          question={question}
+        />
+      ))}
+      <Button
+        icon={<Plus />}
+        className='w-full'
+        onClick={() => addNewQuestion()}
+      >
+        Добавить вопрос
+      </Button>
     </section>
   )
 }

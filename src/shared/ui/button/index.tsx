@@ -1,9 +1,10 @@
 'use client'
 
-import cln from '@/shared/helpers/classname'
 import type Link from 'next/link'
 import { type ButtonHTMLAttributes, type ElementType, FC, type ReactNode } from 'react'
 import { type VariantProps, tv } from 'tailwind-variants'
+
+import cln from '@src/shared/helpers/classname'
 
 interface IProps<E extends ElementType = ElementType>
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'>,

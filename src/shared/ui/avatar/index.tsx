@@ -1,5 +1,6 @@
-import DefaultAvatar from '@/shared/icons/avatar'
 import Image from 'next/image'
+
+import DefaultAvatar from '../../../../public/assets/icons/avatar'
 
 const Avatar = ({ img }: { img?: string }) => {
   return (

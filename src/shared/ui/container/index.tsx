@@ -1,5 +1,6 @@
-import cln from '@/shared/helpers/classname'
 import { ElementType, FC, ReactNode } from 'react'
+
+import cln from '@src/shared/helpers/classname'
 
 interface IProps<E extends ElementType = ElementType> {
   className?: string

@@ -1,9 +1,10 @@
 'use client'
 
-import cln from '@/shared/helpers/classname'
-import BurgerMenu from '@/shared/ui/burger'
 import Link from 'next/link'
 import { useState } from 'react'
+
+import cln from '@src/shared/helpers/classname'
+import BurgerMenu from '@src/shared/ui/burger'
 
 import Nav from './nav'
 

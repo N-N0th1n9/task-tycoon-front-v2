@@ -1,8 +1,9 @@
-import CrossIcon from '@/shared/icons/cross'
-import SaveIcon from '@/shared/icons/save'
-import Button from '@/shared/ui/button'
-import Input from '@/shared/ui/input'
-import SwitchBar from '@/shared/ui/switchbar'
+import Button from '@src/shared/ui/button'
+import Input from '@src/shared/ui/input'
+import SwitchBar from '@src/shared/ui/switchbar'
+
+import CrossIcon from '../../../../public/assets/icons/cross'
+import SaveIcon from '../../../../public/assets/icons/save'
 
 const UpdateProfileDataForm = () => {
   // const submitForm = () => {}

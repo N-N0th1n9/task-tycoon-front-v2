@@ -1,7 +1,8 @@
-import { Footer } from '@/widgets/footer'
-import { Header } from '@/widgets/header'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+
+import { Footer } from '@src/widgets/footer'
+import { Header } from '@src/widgets/header'
 
 import './globals.css'
 

@@ -1,6 +1,7 @@
-import KeyIcon from '@/shared/icons/key'
-import BaseAuthFormContainer from '@/shared/ui/base-auth-form-container'
-import Input from '@/shared/ui/input'
+import BaseAuthFormContainer from '@src/shared/ui/base-auth-form-container'
+import Input from '@src/shared/ui/input'
+
+import KeyIcon from '../../../../public/assets/icons/key'
 
 const ChangePasswordForm = () => {
   return (

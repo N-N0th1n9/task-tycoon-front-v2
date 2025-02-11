@@ -1,7 +1,9 @@
-import SaveIcon from '@/shared/icons/save'
-import { ROUTES } from '@/shared/navigation/routing-paths'
-import Button from '@/shared/ui/button'
 import Link from 'next/link'
+
+import { ROUTES } from '@src/shared/navigation/routing-paths'
+import Button from '@src/shared/ui/button'
+
+import SaveIcon from '../../../../public/assets/icons/save'
 
 const ChangePasswordButton = () => {
   return (

@@ -1,5 +1,6 @@
-import cln from '@/shared/helpers/classname'
 import { FC, HTMLAttributes } from 'react'
+
+import cln from '@src/shared/helpers/classname'
 
 import styles from './style.module.css'
 

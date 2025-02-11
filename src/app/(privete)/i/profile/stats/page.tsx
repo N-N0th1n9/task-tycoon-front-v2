@@ -1,4 +1,4 @@
-import ListEntry from '@/shared/ui/list-entry'
+import ListEntry from '@src/shared/ui/list-entry'
 
 const ProfileStatsPage = () => {
   // Позже тоже разбить, когда больше инфы будет

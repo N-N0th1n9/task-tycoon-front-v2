@@ -1,16 +1,16 @@
-import cln from '@/shared/helpers/classname'
-import Link from 'next/link'
-import { ElementType, FC, ReactNode } from 'react'
+import { JSX, ReactNode } from 'react'
 
-export interface IProps<E extends ElementType = ElementType> {
-  as?: E | typeof Link
-  label: string
+import cln from '@src/shared/helpers/classname'
+
+export type IProps = {
+  label?: string
   item?: ReactNode
   className?: string
-}
+  as?: 'input' | 'div'
+} & (JSX.IntrinsicElements['div'] | JSX.IntrinsicElements['input'])
 
-const InfoBar: FC<IProps> = ({ label, item, as = 'div', className }) => {
-  const Element = as
+const InfoBar = ({ label, item, className, as = 'div', ...props }: IProps) => {
+  const isInput = as === 'input'
 
   return (
     <div
@@ -19,12 +19,20 @@ const InfoBar: FC<IProps> = ({ label, item, as = 'div', className }) => {
         className
       )}
     >
-      <Element
-        className='w-full justify-self-start pr-5 outline-none'
-        placeholder={label}
-      >
-        {as === 'input' ? null : label}
-      </Element>
+      {isInput ? (
+        <input
+          className='w-full justify-self-start pr-5 outline-none'
+          placeholder={label}
+          {...(props as JSX.IntrinsicElements['input'])}
+        />
+      ) : (
+        <div
+          className='w-full justify-self-start pr-5 outline-none'
+          {...(props as JSX.IntrinsicElements['div'])}
+        >
+          {label}
+        </div>
+      )}
       {item}
     </div>
   )

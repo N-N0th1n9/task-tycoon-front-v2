@@ -1,5 +1,5 @@
-import SwitchBar from '@/shared/ui/switchbar'
-import Textarea from '@/shared/ui/textarea'
+import SwitchBar from '@src/shared/ui/switchbar'
+import Textarea from '@src/shared/ui/textarea'
 
 const AnswerDetailed = () => {
   return (

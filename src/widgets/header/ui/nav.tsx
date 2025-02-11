@@ -1,7 +1,8 @@
-import cln from '@/shared/helpers/classname'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+
+import cln from '@src/shared/helpers/classname'
 
 import { PrivateLinks, PublicLinks } from '../config'
 
