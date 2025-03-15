@@ -1,41 +1,51 @@
 'use client'
 
-import { useEffect } from 'react'
+import { zodResolver } from '@hookform/resolvers/zod'
+import CrossIcon from '@public/assets/icons/cross'
+import SaveIcon from '@public/assets/icons/save'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { z } from 'zod'
 
 import Button from '@src/shared/ui/button'
 import Input from '@src/shared/ui/input'
 import SwitchBar from '@src/shared/ui/switchbar'
 
-import CrossIcon from '../../../../public/assets/icons/cross'
-import SaveIcon from '../../../../public/assets/icons/save'
-import { useProfileStore } from '../model/stores/profile-info-store'
+const profileSchema = z.object({
+  email: z.string().email('Некорректный email'),
+  firstName: z.string().nonempty('Обязательное поле'),
+  lastName: z.string().nonempty('Обязательное поле'),
+  nickname: z.string().nonempty('Обязательное поле'),
+  showStats: z.boolean(),
+  showResults: z.boolean(),
+})
 
-type FormValues = {
-  email: string
-  firstName: string
-  lastName: string
-  nickname: string
-}
+type FormValues = z.infer<typeof profileSchema>
 
 const UpdateProfileDataForm = () => {
-  const { email, firstName, lastName, nickname, setProfile } = useProfileStore()
+  const [profile, setProfile] = useState<FormValues>({
+    email: '',
+    firstName: '',
+    lastName: '',
+    nickname: '',
+    showStats: false,
+    showResults: false,
+  })
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isValid },
-    setValue,
   } = useForm<FormValues>({
-    defaultValues: { email, firstName, lastName, nickname },
+    defaultValues: profile,
+    resolver: zodResolver(profileSchema),
+    mode: 'onChange',
   })
 
   useEffect(() => {
-    setValue('email', email)
-    setValue('firstName', firstName)
-    setValue('lastName', lastName)
-    setValue('nickname', nickname)
-  }, [email, firstName, lastName, nickname, setValue])
+    reset(profile)
+  }, [profile, reset])
 
   const onSubmit = (data: FormValues) => {
     setProfile(data)
@@ -43,46 +53,55 @@ const UpdateProfileDataForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className='flex w-full flex-col gap-9'>
-        <div className='flex w-full gap-4'>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className='w-full'
+    >
+      <div className='flex flex-col gap-9'>
+        <div className='flex gap-4'>
           <div className='flex w-full items-end gap-4'>
             <Input
               placeholder='example@mail.com'
-              className='w-full'
               type='email'
               label='Электронная почта'
-              {...register('email', { required: 'Укажите ваш email' })}
+              {...register('email')}
+              error={errors.email?.message}
             />
             <Button>Изменить</Button>
           </div>
         </div>
         <div className='flex flex-col gap-6'>
-          <div className='flex w-full flex-col gap-4'>
+          <div className='flex flex-col gap-4'>
             <Input
               placeholder='Иван'
-              className='w-full'
               label='Имя'
-              type='firstName'
-              {...register('firstName', { required: 'Укажите ваше имя' })}
+              type='text'
+              {...register('firstName')}
+              error={errors.firstName?.message}
             />
             <Input
               placeholder='Иванов'
-              className='w-full'
               label='Фамилия'
-              type='lastName'
-              {...register('lastName', { required: 'Укажите ваше имя' })}
+              type='text'
+              {...register('lastName')}
+              error={errors.lastName?.message}
             />
             <Input
               placeholder='Никнейм'
-              className='w-full'
               label='Никнейм'
-              type='nickname'
-              {...register('nickname', { required: 'Укажите ваше имя' })}
+              type='text'
+              {...register('nickname')}
+              error={errors.nickname?.message}
             />
-            <div className='flex w-full flex-col'>
-              <SwitchBar label='Показываться статистику другим людям' />
-              <SwitchBar label='Показывать данные другим людям' />
+            <div className='flex flex-col'>
+              <SwitchBar
+                label='Показывать статистику другим людям'
+                {...register('showStats')}
+              />
+              <SwitchBar
+                label='Показывать данные другим людям'
+                {...register('showResults')}
+              />
             </div>
             <div className='flex justify-end gap-4'>
               <Button

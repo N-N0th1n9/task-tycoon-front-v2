@@ -1,9 +1,27 @@
+import Plus from '@public/assets/icons/plus'
+import { RefObject } from 'react'
+
 import Button from '@src/shared/ui/button'
 
-import Plus from '../../../../public/assets/icons/plus'
+const AttachFileButton = ({
+  fileInputRef,
+}: {
+  fileInputRef: RefObject<HTMLInputElement | null>
+}) => {
+  const handleClick = () => {
+    fileInputRef.current?.click()
+  }
 
-const AttachFileButton = () => {
-  return <Button icon={<Plus />}>Прикрепить файл</Button>
+  return (
+    <>
+      <Button
+        icon={<Plus />}
+        onClick={handleClick}
+      >
+        Прикрепить файл
+      </Button>
+    </>
+  )
 }
 
 export default AttachFileButton

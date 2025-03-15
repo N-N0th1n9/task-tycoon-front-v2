@@ -5,8 +5,6 @@ const ProfileFilesPage = () => {
   return (
     <div className='flex w-full flex-col'>
       <AttachFile />
-      <AttachFile />
-      <AttachFile />
     </div>
   )
 }
