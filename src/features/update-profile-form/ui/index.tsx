@@ -59,7 +59,9 @@ const UpdateProfileDataForm = () => {
     >
       <div className='flex flex-col gap-9'>
         <div className='flex gap-4'>
-          <div className='flex w-full items-end gap-4'>
+          <div
+            className={`flex w-full gap-4 ${errors.email?.message ? 'items-center' : 'items-end'}`}
+          >
             <Input
               placeholder='example@mail.com'
               type='email'
