@@ -1,7 +1,11 @@
+import { useFormContext } from 'react-hook-form'
+
 import SwitchBar from '@src/shared/ui/switchbar'
 import Textarea from '@src/shared/ui/textarea'
 
 const AnswerDetailed = () => {
+  const { register } = useFormContext()
+
   return (
     <div>
       <Textarea

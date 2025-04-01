@@ -1,39 +1,91 @@
 import Plus from '@public/assets/icons/plus'
 import TrashIcon from '@public/assets/icons/trash'
 import { FC } from 'react'
+import { useFieldArray, useFormContext } from 'react-hook-form'
 
 import Button from '@src/shared/ui/button'
 import Checkbox from '@src/shared/ui/checkbox'
 import InfoBar from '@src/shared/ui/infobar'
-import { QuestionOption } from '@src/widgets/task-editor/types'
+import { QuestionMultiOption } from '@src/widgets/task-editor/types'
 
 interface IPropsAnswerMulti {
-  questionId?: string
-  answers: QuestionOption[]
+  // answers: QuestionMultiOption[]
+  questionIndex: number
 }
 
-interface IPropsAnswerMultiItem extends Pick<IPropsAnswerMulti, 'questionId'> {
-  answer: QuestionOption
-  idx: number
-  onClick?: () => void
+interface IFormValues {
+  questions: Record<string, { content: QuestionMultiOption[] }>
 }
 
-const AnswerMulti: FC<IPropsAnswerMulti> = ({ questionId, answers }) => {
+const AnswerMulti: FC<IPropsAnswerMulti> = ({ questionIndex }) => {
+  const {
+    control,
+    register,
+    setValue,
+    formState: { errors },
+  } = useFormContext<IFormValues>()
+
+  const {
+    fields: answers,
+    remove,
+    append,
+  } = useFieldArray({
+    control,
+    name: `questions.${questionIndex}.content`,
+  })
+
+  const removeAnswer = (idx: number) => {
+    if (answers.length <= 2) return
+    remove(idx)
+  }
+
+  const addAnswer = () => {
+    if (answers.length >= 10) return
+    append({ title: '', is_correct: false })
+  }
+
   return (
     <div className='flex flex-col gap-6'>
       <div>
-        {answers.map((answer, idx) => (
-          <AnswerMultiItem
-            key={answer.id}
-            questionId={questionId}
-            answer={answer}
-            idx={idx + 1}
-          />
-        ))}
+        {answers.map((answer, idx) => {
+          return (
+            <InfoBar
+              as='input'
+              placeholder={`Вариант ${idx + 1}`}
+              defaultValue={answer.title}
+              key={answer.id}
+              {...register(`questions.${questionIndex}.content.${idx}.title`)}
+              error={errors?.questions?.[questionIndex]?.content?.[idx]?.title?.message}
+              item={
+                <div
+                  className='flex items-center gap-8'
+                  key={answer.id}
+                >
+                  <Checkbox
+                    type='checkbox'
+                    defaultChecked={answer.is_correct}
+                    {...register(`questions.${questionIndex}.content.${idx}.is_correct`)}
+                  />
+                  <Button
+                    icon={<TrashIcon />}
+                    color='danger'
+                    border='inline'
+                    size='xs'
+                    iconOnly
+                    onClick={() => removeAnswer(idx)}
+                    disabled={answers.length <= 2}
+                  />
+                </div>
+              }
+            />
+          )
+        })}
       </div>
       <Button
         icon={<Plus />}
         className='w-full'
+        onClick={() => addAnswer()}
+        disabled={answers.length >= 10}
       >
         Добавить вариант
       </Button>
@@ -42,27 +94,3 @@ const AnswerMulti: FC<IPropsAnswerMulti> = ({ questionId, answers }) => {
 }
 
 export default AnswerMulti
-
-const AnswerMultiItem: FC<IPropsAnswerMultiItem> = ({ questionId, answer, idx }) => (
-  <InfoBar
-    as='input'
-    placeholder={`Вариант ${idx}`}
-    defaultValue={answer.title}
-    item={
-      <div className='flex items-center gap-8'>
-        <Checkbox
-          type='checkbox'
-          defaultChecked={answer.is_correct}
-          name={`multi-choice-${questionId}`}
-        />
-        <Button
-          icon={<TrashIcon />}
-          color='danger'
-          border='inline'
-          size='xs'
-          iconOnly
-        ></Button>
-      </div>
-    }
-  />
-)

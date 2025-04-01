@@ -1,9 +1,9 @@
+import DefaultTaskPreviewBig from '@public/assets/icons/default-task-preview-big'
 import Image from 'next/image'
 import { FC } from 'react'
+import { useFormContext } from 'react-hook-form'
 
 import { CreateTaskBtn } from '@src/features/create-task-btn'
-
-import DefaultTaskPreview from '../../../../../public/assets/icons/default-task-preview'
 
 type IProps = {
   image?: string
@@ -13,6 +13,8 @@ type IProps = {
 }
 
 const TaskHeader: FC<IProps> = ({ image, title, type = 'Создать задание' }) => {
+  const methods = useFormContext()
+
   return (
     <header className='mb-15 flex items-center justify-between'>
       <div className='flex items-center justify-center gap-6'>
@@ -24,7 +26,7 @@ const TaskHeader: FC<IProps> = ({ image, title, type = 'Создать зада�
             height={80}
           />
         ) : (
-          <DefaultTaskPreview className='text-ttLightGray' />
+          <DefaultTaskPreviewBig className='text-ttLightGray' />
         )}
         <h1 className='text-ttLightBlack text-2xl font-semibold'>
           {type} - <span className='text-ttDarkGray font-medium underline'>{title}</span>

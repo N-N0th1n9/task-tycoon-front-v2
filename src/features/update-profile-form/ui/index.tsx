@@ -49,7 +49,6 @@ const UpdateProfileDataForm = () => {
 
   const onSubmit = (data: FormValues) => {
     setProfile(data)
-    console.log(data)
   }
 
   return (

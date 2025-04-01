@@ -2,6 +2,7 @@ import { ROUTES } from '@src/shared/navigation/routing-paths'
 
 export const PrivateLinks = [
   // { name: 'Банк', href: ROUTES.BANK as string },
+  { name: 'Создать задание', href: ROUTES.CREATE_TASK },
   { name: 'Поиск', href: ROUTES.SEARCH },
   { name: 'Мои группы', href: '' },
   { name: 'Статистика', href: ROUTES.STATISTICS },

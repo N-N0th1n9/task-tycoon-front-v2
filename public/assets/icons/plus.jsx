@@ -7,7 +7,7 @@ const PlusIcon = props => (
     {...props}
   >
     <path
-      stroke='#000'
+      stroke='currentColor'
       strokeLinecap='round'
       strokeWidth={2}
       d='M12 6v12m6-6H6'
